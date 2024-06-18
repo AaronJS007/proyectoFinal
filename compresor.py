@@ -8,6 +8,7 @@ def estaEnLista(lista,a):
         if a==i:
             return False
     return True
+
 #calcula la frecuencia en que aparece un caracter
 def calcularFrecuencias(archivo,numero):
     listaFrecuencias = []
@@ -96,10 +97,11 @@ def archivoHuff(frecuencias,texto,nombreTXT):
     secuencia=bit.bitarray(bits)
     with open(nombreTXT+'.huff', 'wb') as bf:
         secuencia.tofile(bf)
+    return arbol,TodosLosCaminos
 
-def archivoTable(frecuencias,normbreTxt,cantidad):
+def archivoTable(caminos,normbreTxt,cantidad):
     nose=str(cantidad)+"\n"
-    for i in frecuencias:
+    for i in caminos:
         nose += str(i[0]) + " " + str(i[1])+"\n"
     with open(normbreTxt+'.table','w') as bf:
         bf.write(nose)

@@ -51,7 +51,7 @@ def ArchivoNuevo(NombreTXT,arbol,bits,cantidad):
         
 
 def main():
-    if len(sys.argv) !=0 and len(sys.argv)>=3:
+    if len(sys.argv)>=3:
         
         bits= bit.bitarray()
         with open(sys.argv[1], 'rb') as bf:
