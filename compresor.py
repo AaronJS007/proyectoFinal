@@ -126,7 +126,7 @@ def archivoStats(arbol,frecuencias,nombreTXT):
     pass
 
 def main():
-    if len(sys.argv) !=0 and len(sys.argv)>1 :
+    if  len(sys.argv)>1 :
         with open(sys.argv[1],mode='rb') as file:
             fileContent = file.read()
         frecuencias = calcularFrecuencias(fileContent,len(fileContent))
