@@ -60,6 +60,7 @@ def CaminosArbol(arbol,recorrido="",listaRecorrido=[]):
     CaminosArbol(arbol[2],recorrido+'1',listaRecorrido)
     return listaRecorrido
 
+#calcula la altura de un arbol
 def alturaArbol(arbol):
     if arbol==[]:
         return 0
@@ -67,6 +68,7 @@ def alturaArbol(arbol):
     mx=max(mx,(1+max(alturaArbol(arbol[1]),alturaArbol(arbol[2]))))
     return mx
 
+#retorna una lista de nodos por nivel
 def ListaNodosNivel ( arbol , nivel , i = 0) :
     if arbol ==[]:
         return []
@@ -94,9 +96,6 @@ def archivoHuff(frecuencias,texto,nombreTXT):
     secuencia=bit.bitarray(bits)
     with open(nombreTXT+'.huff', 'wb') as bf:
         secuencia.tofile(bf)
-    with open(nombreTXT+'.txt','w') as bf:
-        bf.write(bits)
-    return arbol, TodosLosCaminos
 
 def archivoTable(frecuencias,normbreTxt,cantidad):
     nose=str(cantidad)+"\n"
