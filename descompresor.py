@@ -67,7 +67,6 @@ def main():
                     listaFrecuencias.append((int(linea[0]),int(linea[1])))
         arbol=contruirArbol(listaFrecuencias,len(listaFrecuencias))
         ArchivoNuevo(sys.argv[3],arbol,bits,cantidCarac)  
-        pass
     else :
         print("El programa no tiene los argumentos necesarios")
 main()
