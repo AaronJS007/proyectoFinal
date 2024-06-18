@@ -2,6 +2,8 @@ import sys
 import bitarray
 import bitarray as bit
 
+sys.setrecursionlimit(50000000)
+
 #es para crear un subarbol
 def arbol(lista,nodo="nose"):
     if lista==[]:
